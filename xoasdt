@@ -1,0 +1,17 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var sodienthoai = "sdt";
+var url = "https://www.facebook.com/ajax/settings/mobile/delete_phone.php";
+var data = "phone_number=%2B"+sodienthoai+"&profile_id="+userId+"&shared=false&__user="+userId+"&__a=1&__dyn=7xu5Fo4OQ1PyUbAjFwn84a2i5U4e1Fx-ewSwMxW0DUS2S0lW4o3BwbC0LVE4W0y8460KEswaq1vwGwt81sbzo5-1uwbe3a7o884y0i23S0H8bE2swdq1iwmE2ewnE2Lx-0lK3qazo11E2ZwrU6C0L8&__csr=&__req=3&__hs=19277.BP%3ADEFAULT.2.0.0.0.0&dpr=1&__ccg=MODERATE&__rev=1006367035&__s=05667y%3Apknadd%3Avl0e7g&__hsi=7153563181841666422&__comet_req=0&cquick=jsc_c_s&cquick_token=AQ6MmWus1asGfzhi6h0&ctarget=https%3A%2F%2Fwww.facebook.com&fb_dtsg="+fbdtsg+"&jazoest=25793&lsd=C_1NVfQWteyoFQkozKDoA0&__aaid=232361492&__spin_r="+spinR+"&__spin_b=trunk&__spin_t=" + spinT;
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

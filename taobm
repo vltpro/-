@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = "22014";
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var tenbm = "namebm";
+var url = "https://business.facebook.com/business/create_account/?brand_name=IziBm%20"+tenbm+"&first_name=IziBm&last_name="+tenbm+"&email=IziBm"+tenbm+"%40gmail.com&timezone_id=42&business_category=OTHER";
+var data = "__user="+userId+"&__a=1&__dyn=7xeUmFoO3-SudwCwRyUbFuC2-m2q3Kq2i5U4e1Fx-exS68nxy7Eiwzwq8S2S4okwAwSz82EyEqx60DU4m0nCq1eK1VgC11x-9xm1WxO4Uowuo9oeUa85vzo1vrzo5-1uw_wsU9kbxR1-18wnE31G3G48comwkE-7Ejw8y0RE5a1qxa1XwnFU2DxiaBw4Dxe6odEGdw46wbS1bwzwqo&__csr=&__req=14&__hs=19179.BP%3Abrands_pkg.2.0.0.0.0&dpr=1&__ccg=EXCELLENT&__rev=1005799028&__s=13crnl%3Ay3xr7o%3A90ls7j&__hsi="+hsi+"&__comet_req=0&fb_dtsg="+fbdtsg+"&jazoest=25524&lsd=tkyvI3I-fLyqNCN_B6ZIPe&__spin_r="+spinR+"&__spin_b="+spinB+"&__spin_t="+spinT+"&__jssesw=1";
+
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

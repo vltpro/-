@@ -1,0 +1,19 @@
+javascript:var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var email = "prompt("Mail Cần Add Bm :", "");
+var ivtk = "⁪⁬⁮ ⁪⁬⁮";
+var randomname = "nhaprandom";
+var url = "https://business.facebook.com/business/invitation/login/";
+var data = "first_name=BM &last_name="+randomname+"&invitation_token="+ivtk+"&user_preferred_business_email=&__user="+userId+"&__a=1&__dyn=7xeUmwkHgydwn8K2WnFwn84a2i5U4e1Fx-ewSwMxW0DUS2S0lW4o3Bw5VCwjE3awbG78b87C1xwEwlU-0nSUS1vwnE2PwBgao884y1uwc63S482rzUuw9O0RE5a1qw8W1uwa-7U1AEow46wbS1Lwqo&__csr=&__req=6&__hs=19260.BP%3ADEFAULT.2.0.0.0.0&dpr=1&__ccg=MODERATE&__rev=1006266999&__s=3jgfqd%3Awlff1o%3Axmffd7&__hsi="+hsi+"&__comet_req=0&fb_dtsg="+fbdtsg+"&jazoest=25340&lsd=L8Gyo8itxZpCPrdQ2piBrk&__spin_r="+spinR+"&__spin_b=trunk&__spin_t="+spinT+"&__jssesw=1";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

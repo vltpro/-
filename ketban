@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var email = "hotmail";
+var uidbanbe = "thayuidkb";
+var url = "https://www.facebook.com/api/graphql/";
+var data = "av="+userId+"&__user="+userId+"&__a=1&__dyn=7AzHJ16U9ob8ng5K8G6EjBWo2nDwAxu13wsongS3q2ibwyzE2qwJyEiwsobo6u3y4o2Gwn82nwb-q7oc81xoswMwto88422y11xmfz83WwgEcHzoaEnxO0Bo7O2l2Utwwwi831wiEjwZwlo5qfK6E7e58jwGzEaE5e7oqBwJK2W5olwUwgojUlDw-wUwxwjFovUy2a0-pobpEbUGdwb6223908O3216AzUjwTwNwLwFg&__csr=gac4L7ONIYy6R6N48OO89YBYGFjFE8uLjHpeJJFVIPHFnWlQABrh5BVvAKBGlqgDCALUxeEFoxfgy9yiiqBggAWG9AzazUKjnF3UyiEhBG5aBGum9KqmudGieBK9gW8y8lG9xG3Cpzoyu5EC3m6ECi6BxemdyUKWwxg4-m2i2K58Kq9y8iwtEmwXwOxi4oeE8UbohxG49E4C2S4V9E3mxG226o98c8e-5EnwRwKxG0To25w2SE1eE0sFw30802LBw32U6C1RAxq0xqRyoliK0hC06uo1S80yu0M409ow1txw2aV8S4o0Re0rfG04oBw5uw0Olw70w7Ow2zU1OE17U3fw&__req=2k&__hs=19259.HYP%3Acomet_pkg.2.1.0.2.1&dpr=1.5&__ccg=EXCELLENT&__rev=1006266754&__s=xv893l%3A3yf9mz%3A0n2lor&__hsi=7147059962576523984&__comet_req=15&fb_dtsg="+fbdtsg+"&jazoest=25567&lsd=KrfAdzV-0mzZPZuxov9gf2&__spin_r="+spinR+"&__spin_b=trunk&__spin_t="+spinT+"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=FriendingCometFriendRequestSendMutation&variables=%7B%22input%22%3A%7B%22attribution_id_v2%22%3A%22SearchCometGlobalSearchDefaultTabRoot.react%2Ccomet.search_results.default_tab%2Cunexpected%2C1664054396267%2C897275%2C%2C%3BSearchCometGlobalSearchTopTabRoot.react%2Ccomet.search_results.top_tab%2Ctap_search_bar%2C1664054383305%2C501689%2C391724414624676%2C%22%2C%22friend_requestee_ids%22%3A%5B%22"+uidbanbe+"%22%5D%2C%22refs%22%3A%5Bnull%5D%2C%22source%22%3A%22search%22%2C%22warn_ack_for_ids%22%3A%5B%5D%2C%22actor_id%22%3A%22"+userId+"%22%2C%22client_mutation_id%22%3A%223%22%7D%2C%22scale%22%3A1.5%7D&server_timestamps=true&doc_id=5419238518196807";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

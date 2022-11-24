@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var email = "hotmail";
+var uidbanbe = "thayuidxnkb";
+var url = "https://www.facebook.com/api/graphql/";
+var data = "av="+userId+"&__user="+userId+"&__a=1&__dyn=7AzHJ16U9ob8ng5K8G6EjBWo2nDwAxu13wsongS3q2ibwyzE5S3O2Saxa1NwJwpUe8hwaG1sw9u0LVEtwMw65xO2OU7m2210wEwgolzUO0-E4a3aUS2G5Usw9m1YwBgK7o884y0Mo4G4Ufo5m1mzXxG1Pxi4UaEW2au1jxS6FobrwKxm5oe8cEW4-5pUfEe88o4Wm7-8wywoE7u7FobpEbUGdwb6223908O3216AzUjwTwNwLwFg&__csr=gac4I8ONIYAtkr4jhkn4N22iFhIlvWYN5hOAJWayLiH8LTJfp4OaRi_GWiDh4qLmqOWLBDlqBn-uujh79GhDVFeGyk-EOqqbCnFrxaiKcHCK59aDhVHBhpVVqAzAKWCgWcAwywFxei66i8Dy8myo-iu68qyp8-amq4FpUKfGbyFHg98szpo98jxu58DKEC8xaczVEoyUbqgiwGx23a58ggaogwkob8gCDxC2u2S4V9Ec85y1cxG226o98c8e-5EGcCwIUy78y49GwdS0xo5u0a2w4Ww3to0Pt0uE0M20UE0alE5S00wjo0LSEHBh8Sul2Uk8hBAWK8xd4wxDD-7eF-ECqGCyqxO2ygj4GiJoCqHDil3pFCmbGcAGnWzuWUvC_RwidfDGl6zHU5a3i0J9o1PoC4Ujwiohw41xy0rC0ty0iNwwwdu0M408lwgE1dU5O1TCy9qg9FVaU6m0cio0ymmjyUhG0dgw6OmHK04mBw5uw67w0IdCg5K0lO04wE1OE1XU1DE&__req=2r&__hs=19259.HYP%3Acomet_pkg.2.1.0.2.1&dpr=1.5&__ccg=EXCELLENT&__rev=1006266754&__s=sd7k52%3A3yf9mz%3A0vbrv6&__hsi=7147061796891048496&__comet_req=15&fb_dtsg="+fbdtsg+"&jazoest=25508&lsd=RLwW6vGOZJwuxVYcefZ7Vr&__spin_r="+spinR+"&__spin_b=trunk&__spin_t="+spinT+"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=FriendingCometFriendRequestConfirmMutation&variables=%7B%22input%22%3A%7B%22attribution_id_v2%22%3A%22FriendingCometRoot.react%2Ccomet.friending%2Ctap_bookmark%2C1664054826733%2C622900%2C2356318349%2C%22%2C%22friend_requester_id%22%3A%22"+uidbanbe+"%22%2C%22source%22%3A%22friends_tab%22%2C%22actor_id%22%3A%22"+userId+"%22%2C%22client_mutation_id%22%3A%223%22%7D%2C%22scale%22%3A1.5%2C%22refresh_num%22%3A0%7D&server_timestamps=true&doc_id=4808395512525992";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

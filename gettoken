@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = "22014";
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var dienma = "ma2fa";
+var url = "https://business.facebook.com/security/twofactor/reauth/enter/";
+var data = "approvals_code="+dienma+"&save_device=false&__user="+userId+"&__a=1&__dyn=7xeUmF3EfXpUS2q3mbwyyVuC2-m2q3Kq2i5U4e1Fx-ewSxu68uxa2e1Ezobo9E98dEO0G8G6Ehw9-15wfO1YCwjHwuk9wgovyolwuEsxe687C2m3K2y1nUS0jG12KdwnU5W0IU9kbxR12ewi85W1bxq1uG3G48comy84CfxW4U28wdq1iwmEiwuU5Wu0FUkyFo158ixe9zUdEGdwzwea0Lo4K2e1Fw&__csr=&__req=7&__hs=19247.BP%3ADEFAULT.2.0.0.0.0&dpr=1&__ccg=EXCELLENT&__rev=1006180940&__s=6rry5v%3Ac0gs4d%3A6bmcby&__hsi="+hsi+"&__comet_req=0&fb_dtsg="+fbdtsg +"&jazoest=25306&lsd=WY2oCag1ydPGme7G7b_EfQ&__spin_r="+spinR+"&__spin_b=trunk&__spin_t="+spinT+"&__jssesw=1";
+
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

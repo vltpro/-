@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = "22014";
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var pageid = "uidpage";
+var url = "https://www.facebook.com/ajax/pages/delete_page.php";
+var data = "confirm=confirm&id="+pageid+"&__d=1&__user="+userId+"&__a=1&__dyn=7xeUmBwjbg7ebwKheC1swgE98nwgU6C7UW3q327E2vzobohw5cx60Vo2Vwb-q1ewcG0KEswaq0yE7i0n2US1vwnEO0FE9kbxS2218w4wwZwaO2W0D83mwkE5G0zE5W0HUvw5rwSyES0gq0Lo6-1Fw&__csr=&__req=6&__hs=19179.BP%3ADEFAULT.2.0.0.0.0&dpr=1&__ccg=EXCELLENT&__rev=1005797739&__s=cr2z7p%3A9br1p1%3Aikw99c&__hsi="+hsi+"&__comet_req=0&cquick=jsc_c_1w&cquick_token=AQ7kNmv6PFb66OD3ew4&ctarget=https%25253A%25252F%25252Fwww.facebook.com&fb_dtsg="+fbdtsg+"&jazoest=25304&lsd=sBkKtf-qrFeZs_2MziuoKN&__spin_r="+spinR+"&__spin_b="+spinB+"&__spin_t="+spinT;
+
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

